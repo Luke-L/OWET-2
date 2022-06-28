@@ -65,7 +65,7 @@ function generateHtml(json){
     html += `<ul class="nested">`;
     json.Types["datatool.ux.valid_map_names"].Choices.forEach(map=>{
         html += `<li>[${map.QueryName}] ${map.DisplayName} <span class="extractIcon buttonContainerSmall">
-        <a class='button' onClick="cmdBtn('extract-maps', '${map.QueryName}')">[ Extract ]</a>
+        <a class='button' onClick="cmdBtn('extract-maps', '${map.QueryName}', '--deduplicate-textures True')">[ Extract ]</a>
         </span><hr /></li>`;
     });
     html += `</ul>`;
